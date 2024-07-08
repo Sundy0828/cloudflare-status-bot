@@ -7,14 +7,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Sundy0828/cloudflare-status-bot)
 ![GitHub stars](https://img.shields.io/github/stars/Sundy0828/cloudflare-status-bot?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Sundy0828/cloudflare-status-bot?style=social)
-![Build Status](https://img.shields.io/github/actions/workflow/status/Sundy0828/cloudflare-status-bot/ci.yml?branch=main)
-![Coverage Status](https://img.shields.io/coveralls/github/Sundy0828/cloudflare-status-bot)
-![Dependencies](https://img.shields.io/librariesio/github/Sundy0828/cloudflare-status-bot)
-![Dev Dependencies](https://img.shields.io/david/dev/Sundy0828/cloudflare-status-bot)
 ![GitHub license](https://img.shields.io/github/license/Sundy0828/cloudflare-status-bot)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Sundy0828/cloudflare-status-bot)
-![GitHub all releases](https://img.shields.io/github/downloads/Sundy0828/cloudflare-status-bot/total)
-![node-current](https://img.shields.io/node/v/cloudflare-status-bot)
 
 This Discord bot monitors the status of Cloudflare and manages channels where the status of specific websites using Cloudflare is reported. It periodically checks the Cloudflare status and notifies designated Discord channels when Cloudflare is down or when monitored websites are affected. Admins can configure the bot to monitor specific websites across different Discord channels, ensuring timely notifications and management during service disruptions.
 
