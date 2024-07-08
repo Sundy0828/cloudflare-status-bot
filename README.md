@@ -1,9 +1,9 @@
-# Discord Cloudflare Monitor Bot (CloudflareStatusBot)
+# Discord Cloudflare Monitor Bot (cloudflare-status-bot)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Sundy0828/CloudflareStatusBot)
-![GitHub contributors](https://img.shields.io/github/contributors/Sundy0828/CloudflareStatusBot)
-![GitHub stars](https://img.shields.io/github/stars/Sundy0828/CloudflareStatusBot?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Sundy0828/CloudflareStatusBot?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/Sundy0828/cloudflare-status-bot)
+![GitHub contributors](https://img.shields.io/github/contributors/Sundy0828/cloudflare-status-bot)
+![GitHub stars](https://img.shields.io/github/stars/Sundy0828/cloudflare-status-bot?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Sundy0828/cloudflare-status-bot?style=social)
 
 This Discord bot monitors the status of Cloudflare and manages channels where the status of specific websites using Cloudflare is reported. It periodically checks the Cloudflare status and notifies designated Discord channels when Cloudflare is down or when monitored websites are affected. Admins can configure the bot to monitor specific websites across different Discord channels, ensuring timely notifications and management during service disruptions.
 
@@ -18,7 +18,7 @@ This Discord bot monitors the status of Cloudflare and manages channels where th
 
 To install and run the bot locally:
 
-1. Clone this repository: `git clone https://github.com/Sundy0828/CloudflareStatusBot.git`
+1. Clone this repository: `git clone https://github.com/Sundy0828/cloudflare-status-bot.git`
 2. Install dependencies: `npm install`
 3. Create a `.env` file based off of the .env.example file.
 4. Configure your Discord bot token and other settings in `index.ts`.
