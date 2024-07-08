@@ -1,17 +1,17 @@
 {
-  "name": "discord-bot-template",
+  "name": "cloudflare-status-bot",
   "version": "1.0.0",
   "description": "A Discord bot boilerplate including TypeScript and ESLint.",
   "author": {
-    "email": "fellipeutaka@gmail.com",
-    "name": "Fellipe Utaka"
+    "email": "jerrod.sunderland@gmail.com",
+    "name": "Jerrod Sunderland"
   },
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/fellipeutaka/discord-bot-template",
+  "homepage": "https://github.com/Sundy0828/cloudflare-status-bot",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fellipeutaka/discord-bot-template.git"
+    "url": "https://github.com/Sundy0828/cloudflare-status-bot.git"
   },
   "main": "dist/index.js",
   "scripts": {
@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",

@@ -1,106 +1,48 @@
-<h1 align="center">Discord Bot Template</h4>
-<p align="center">
-  <img
-    alt="Repository size"
-    src="https://img.shields.io/github/repo-size/fellipeutaka/discord-bot-template"
-  />
-  <a href="https://www.linkedin.com/in/fellipeutaka/">
-    <img
-      alt="Made by Fellipe Utaka"
-      src="https://img.shields.io/badge/made%20by-Fellipe%20Utaka-%2304D361"
-    />
-  </a>
-  <a href="https://github.com/fellipeutaka/discord-bot-template/commits/main">
-    <img
-      alt="GitHub last commit"
-      src="https://img.shields.io/github/last-commit/fellipeutaka/discord-bot-template"
-    />
-  </a>
-  <img
-    alt="License"
-    src="https://img.shields.io/badge/license-MIT-brightgreen"
-  />
-  <a href="https://github.com/fellipeutaka/discord-bot-template/stargazers">
-    <img
-      alt="Stargazers"
-      src="https://img.shields.io/github/stars/fellipeutaka/discord-bot-template?style=social"
-    />
-  </a>
-</p>
+# Discord Cloudflare Monitor Bot (CloudflareStatusBot)
 
-<p align="center">
-  <a href="#-project">Project</a> |
-  <a href="#-technologies">Technologies</a> |
-  <a href="#ℹ%EF%B8%8F-how-to-use">How to use</a> |
-  <a href="#-how-to-contribute">How to contribute</a> |
-  <a href="#-license">License</a>
-</p>
+![GitHub repo size](https://img.shields.io/github/repo-size/Sundy0828/CloudflareStatusBot)
+![GitHub contributors](https://img.shields.io/github/contributors/Sundy0828/CloudflareStatusBot)
+![GitHub stars](https://img.shields.io/github/stars/Sundy0828/CloudflareStatusBot?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Sundy0828/CloudflareStatusBot?style=social)
 
-## 💻 Project
+This Discord bot monitors the status of Cloudflare and manages channels where the status of specific websites using Cloudflare is reported. It periodically checks the Cloudflare status and notifies designated Discord channels when Cloudflare is down or when monitored websites are affected. Admins can configure the bot to monitor specific websites across different Discord channels, ensuring timely notifications and management during service disruptions.
 
-A boilerplate for a project with Discord.js, TypeScript and ESLint.
+## Features
 
-## 🚀 Technologies
+- Monitor Cloudflare status and notify Discord channels when Cloudflare is down.
+- Manage multiple websites across different Discord channels.
+- Enable/disable channels based on Cloudflare status and monitored website health.
+- Command-based interface for easy configuration and monitoring.
 
-This project was developed with the following technologies:
+## Installation
 
-- [TypeScript][ts]
-- [discord.js][discord.js]
-- [ESLint][eslint]
-- [Prettier][prettier]
+To install and run the bot locally:
 
-## ℹ️ How To Use
+1. Clone this repository: `git clone https://github.com/Sundy0828/CloudflareStatusBot.git`
+2. Install dependencies: `npm install`
+3. Create a `.env` file based off of the .env.example file.
+4. Configure your Discord bot token and other settings in `index.ts`.
+5. Start the bot: `npm start`
 
-To clone and run this application, first you need to create a [Discord Bot](https://www.androidpolice.com/how-to-make-discord-bot/). Afterwards, you will need [Git][git] and [Node.js][node] installed on your computer.
+## Usage
 
-From your command line:
+- `!monitor SITE_URL [CHANNEL_ID...]`: Start monitoring the specified site. If no channel IDs are provided, it will prompt to use the current channel.
+- `!unmonitor SITE_URL [CHANNEL_ID...]`: Stop monitoring the specified site. If no channel IDs are provided, it will use the current channel.
+- `!viewmonitored`: View all currently monitored sites and their associated channels.
+- `!help`: Display bot commands and usage information.
 
-```bash
-# Clone this repository
-$ git clone https://github.com/fellipeutaka/discord-bot-template.git
+## Contributing
 
-# Install dependencies
-# If you are using NPM
-$ npm install
+Contributions are welcome! Please fork the repository and submit a pull request with your changes. For major changes, please open an issue first to discuss what you would like to change.
 
-# If you are using Yarn
-$ yarn install
+## License
 
-# If you are using PNPM
-$ pnpm install
-```
+[MIT](https://choosealicense.com/licenses/mit/)
 
-After that, copy and paste the .env.example file and rename it to .env.
-Then insert your Discord Token and Discord Client ID. Great! Now you just need to start the development server.
+## Contact
 
-```bash
-# Start server
-# If you are using NPM
-$ npm run dev
-# If you are using Yarn
-$ yarn dev
-# If you are using PNPM
-$ pnpm dev
-```
+- Discord: sundy0828#3927
+- Email: jerrod.sunderland@gmail.com
+- GitHub: [Sundy0828](https://github.com/Sundy0828)
 
-## 🤔 How to contribute
-
-1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name> `.
-3. Make your changes and commit them: `git commit -m '<commit_message> '`
-4. Push to original branch:`git push origin <project_name> / <local>`
-5. Create the pull request. Or, see the GitHub documentation on [how to create a pull request][pr].
-
-## 📝 License
-
-This project is under the MIT license. See the [LICENSE](https://github.com/fellipeutaka/discord-bot-template/blob/main/LICENSE.md) for details.
-
-Made with ♥ by Fellipe Utaka 👋 [Get in touch!](https://www.linkedin.com/in/fellipeutaka/)
-
-[pr]: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
-[git]: https://git-scm.com
-[node]: https://nodejs.org/
-[ts]: https://www.typescriptlang.org/
-[discord.js]: https://discord.js.org/
-[eslint]: https://eslint.org/
-[prettier]: https://prettier.io/
+Feel free to reach out for any questions or suggestions!
