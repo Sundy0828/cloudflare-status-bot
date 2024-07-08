@@ -1,4 +1,4 @@
-import { Client, Message } from "discord.js";
+import { Client, Message, GatewayIntentBits } from "discord.js";
 import { config } from "./config";
 
 import { monitorCommand } from "./commands/monitor";
@@ -8,7 +8,12 @@ import { helpCommand } from "./commands/help";
 import { Commands } from "./commands";
 
 const client = new Client({
-  intents: ["Guilds", "GuildMessages", "DirectMessages"],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.DirectMessages,
+    GatewayIntentBits.MessageContent,
+  ],
 });
 
 client.once("ready", () => {
@@ -16,16 +21,17 @@ client.once("ready", () => {
 });
 
 client.on("messageCreate", async (message: Message) => {
-  // Ignore messages from the bot itself
-  if (message.author.bot) return;
-
   const { DISCORD_PREFIX } = config;
 
-  // Check if the message starts with the defined prefix
-  if (!message.content.startsWith(DISCORD_PREFIX)) return;
+  // Check if the message starts with the defined prefix or Ignore messages from the bot itself
+  if (!message.content.startsWith(DISCORD_PREFIX) || message.author.bot) return;
 
   // Extract the command without the prefix
-  const command = message.content.slice(DISCORD_PREFIX.length).split(" ")[0];
+  const args = message.content
+    .slice(config.DISCORD_PREFIX.length)
+    .trim()
+    .split(/ +/);
+  const command = args.shift()?.toLowerCase();
 
   switch (command) {
     case Commands.MONITOR:
@@ -41,7 +47,9 @@ client.on("messageCreate", async (message: Message) => {
       await helpCommand(message);
       break;
     default:
-      // Handle unknown commands or do nothing
+      message.reply(
+        `Unknown command. Use "${DISCORD_PREFIX}${Commands.HELP}" to see available commands.`
+      );
       break;
   }
 });
